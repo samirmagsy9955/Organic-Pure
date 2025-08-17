@@ -455,6 +455,25 @@
                 font-size: 1rem;
             }
         }
+		
+		.whatsapp-icon {
+  /* تحديد موضع الأيقونة */
+  position: relative;
+  /* إعطاء الأيقونة حركة */
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
     </style>
 </head>
 
@@ -466,7 +485,7 @@
 				
             <div class="contact-info">
                 
-                <span> للاستشارات م. باسم منير</span>
+                <span>مهندس باسم منير</span>
 				<a href="tel:01067409639">
                     <i class="fas fa-phone"></i>
                     01067409639
@@ -777,9 +796,10 @@
                 تم التطوير بواسطة
                 <a href="https://wa.me/201129724884" target="_blank">
                     <i class="fas fa-user-tie"></i>
-                    مهندس سمير مجدى
-                 <i class="fab fa-whatsapp"></i>
-				</a>
+                     مهندس سمير مجدى
+               <div class="whatsapp-icon">
+  <i class="fab fa-whatsapp fa-2x"></i>
+</div> </a>
 				
             </div>
             <div class="copyright">
