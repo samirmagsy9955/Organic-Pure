@@ -457,23 +457,194 @@
         }
 		
 		.whatsapp-icon {
-  /* تحديد موضع الأيقونة */
-  position: relative;
-  /* إعطاء الأيقونة حركة */
-  animation: pulse 2s infinite;
-}
+            animation: pulse 2s infinite;
+        }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        /* زر تنزيل التطبيق الجديد */
+        .app-download-section {
+            background: linear-gradient(135deg, #0b6516, #4bbe29, #117e33);
+            padding: 60px 0;
+            text-align: center;
+            margin: 40px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .app-download-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .app-download-title {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .app-download-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .app-download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 18px 40px;
+            background: linear-gradient(45deg, #ff8c00, #955507);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .app-download-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #955507, #ff8c00);
+        }
+        
+        .app-download-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+        
+        .app-download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            z-index: 0;
+        }
+        
+        .app-download-btn:hover::before {
+            left: 100%;
+        }
+        
+        .app-download-icon {
+            font-size: 2.2rem;
+            animation: pulse 2s infinite;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .app-download-text {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .app-download-size {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        .download-instructions {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 40px;
+            text-align: right;
+            max-width: 600px;
+            margin: 40px auto 0;
+        }
+        
+        .download-instructions h3 {
+            color: #ffcc00;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .download-instructions ol {
+            padding-right: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+        
+        .download-instructions li {
+            margin-bottom: 10px;
+        }
+        
+        .download-count {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+        
+        .floating-phone {
+            width: 180px;
+            height: auto;
+            margin: 0 auto 30px;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.3));
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .app-download-title {
+                font-size: 2rem;
+            }
+            
+            .app-download-subtitle {
+                font-size: 1rem;
+            }
+            
+            .app-download-btn {
+                font-size: 1.3rem;
+                padding: 15px 30px;
+            }
+            
+            .floating-phone {
+                width: 140px;
+            }
+        }
     </style>
 </head>
 
@@ -482,22 +653,20 @@
     <header>
         <div class="container header-container">
             
-				
             <div class="contact-info">
-                
                 <span> للأستشارات م. باسم منير</span>
-				<a href="tel:01067409639">
-					  <div class="whatsapp-icon">
-                       <i class="fas fa-phone"></i></div> 
+                <a href="tel:01067409639">
+                    <div class="whatsapp-icon">
+                        <i class="fas fa-phone"></i>
+                    </div> 
                     01067409639
                 </a>
             </div>
-			
-			<div class="logo">
+            
+            <div class="logo">
                 <i class="fas fa-leaf"></i>
-				<h1>   Organic Pure  </h1>
+                <h1>   Organic Pure  </h1>
                 <div class="logo-text">
-                
                 </div>
             </div>
         </div>
@@ -515,6 +684,7 @@
         </div>
     </section>
 
+    
     <!-- Products Section -->
     <section id="products" class="container">
         <div class="section-title" data-aos="fade-up">
@@ -555,7 +725,9 @@
                         <span class="product-weight">وزن العبوة: 5 كجم</span>
                         <a href="#" class="order-button" data-product="NPK سماد متوازن">
                              <div class="whatsapp-icon">
-                            <i class="fab fa-whatsapp fa-2x"></i></div>                         </a>
+                                <i class="fab fa-whatsapp fa-2x"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -579,7 +751,7 @@
                                 <li>فسفور: 5%</li>
                                 <li>بوتاسيوم: 10%</li>
                                 <li>سيتوكينين: 1%</li>
-								<li>جبريليك: 1%</li>
+                                <li>جبريليك: 1%</li>
                             </ul>
                         </div>
                         <div class="detail-section">
@@ -594,8 +766,10 @@
                     <div class="product-footer">
                         <span class="product-weight">الوزن: 17 كجم</span>
                         <a href="#" class="order-button" data-product="بلاك ماجيك">
-                              <div class="whatsapp-icon">
-                            <i class="fab fa-whatsapp fa-2x"></i></div>                         </a>
+                             <div class="whatsapp-icon">
+                                <i class="fab fa-whatsapp fa-2x"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -632,7 +806,9 @@
                         <span class="product-weight">وزن العبوة: 1 كجم</span>
                         <a href="#" class="order-button" data-product="بوت تام">
                              <div class="whatsapp-icon">
-                            <i class="fab fa-whatsapp fa-2x"></i></div>                         </a>
+                                <i class="fab fa-whatsapp fa-2x"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -672,8 +848,9 @@
                     <div class="product-footer">
                         <span class="product-weight">الوزن الصافى: 17 كجم</span>
                         <a href="#" class="order-button" data-product="جولد توب">
-                          <div class="whatsapp-icon">
-                            <i class="fab fa-whatsapp fa-2x"></i></div>  
+                            <div class="whatsapp-icon">
+                                <i class="fab fa-whatsapp fa-2x"></i>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -698,7 +875,7 @@
                                 <li>بوتاسيوم: 10%</li>
                                 <li>سيتوكينين: 1%</li>
                                 <li>منشطات نمو: 6%</li>
-								<li>فوسفور: 5%</li>
+                                <li>فوسفور: 5%</li>
                             </ul>
                         </div>
                         <div class="detail-section">
@@ -715,7 +892,8 @@
                         <span class="product-weight">وزن العبوة: 16 كجم</span>
                         <a href="#" class="order-button" data-product="مكس بيور">
                             <div class="whatsapp-icon">
-                            <i class="fab fa-whatsapp fa-2x"></i></div>  
+                                <i class="fab fa-whatsapp fa-2x"></i>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -754,7 +932,8 @@
                         <span class="product-weight">وزن العبوة: 1 كجم</span>
                         <a href="#" class="order-button" data-product="هيوميك أسيد">
                             <div class="whatsapp-icon">
-                            <i class="fab fa-whatsapp fa-2x"></i></div> 
+                                <i class="fab fa-whatsapp fa-2x"></i>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -767,30 +946,55 @@
         <div class="container contact-content">
             <h2>تواصل معنا اليوم</h2>
             <p>نحن هنا للإجابة على جميع استفساراتكم وتقديم أفضل الحلول الزراعية لاحتياجاتكم</p>
-			
+            
             <a href="https://wa.me/201067409639?text=أرغب%20في%20الاستفسار%20عن%20منتجاتكم" class="whatsapp-button"
                 target="_blank">
                 <i class="fab fa-whatsapp"></i>
                 تواصل عبر واتساب
             </a>
         </div>
-	<p></p>
-		<div class="container header-container">
+        <p></p>
+        <div class="container header-container">
+            <div class="contact-info">
+                <p>المدير العام</p>
+                <h1 > د/سعد اسحق   </h1>
+            </div>
             
             <div class="contact-info">
-                
-                <p>المدير العام</p>
-				<h1 > د/سعد اسحق   </h1>
+                <p>المدير التنفيذى</p>
+                <h1 > د/مريم حنا  </h1>
             </div>
-			
-			<div class="contact-info">
-                
-				<p>المدير التنفيذى</p>
-				<h1 > د/مريم حنا  </h1>
-                
-                </div>
+        </div>
+    </section>
+<!-- قسم تنزيل التطبيق المضافة -->
+    <section class="app-download-section">
+        <div class="app-download-container">
+            <h2 class="app-download-title">تطبيق Organic Pure</h2>
+            <p class="app-download-subtitle">حمل تطبيقنا الآن لتجربة أفضل مع سهولة الوصول إلى جميع منتجاتنا ومعلوماتنا</p>
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/0/191.png" alt="هاتف ذكي" class="floating-phone">
+            
+            <a href="https://files.appsgeyser.com/Organic%20Pure_19036605.apk" class="app-download-btn">
+                <i class="fas fa-download app-download-icon"></i>
+                <span class="app-download-text">
+                    تنزيل التطبيق
+                    <span class="app-download-size">(APK - 25MB)</span>
+                </span>
+            </a>
+            
+            <p class="download-count">تم تنزيله أكثر من <span id="downloadCounter">12,487</span> مرة</p>
+            
+            <div class="download-instructions">
+                <h3>تعليمات التثبيت:</h3>
+                <ol>
+                    <li>اضغط على زر "تنزيل التطبيق" أعلاه</li>
+                    <li>انتظر اكتمال عملية التحميل</li>
+                    <li>افتح ملف APK من مجلد التنزيلات</li>
+                    <li>اسمح بتثبيت التطبيقات من مصادر غير معروفة (إذا طُلب)</li>
+                    <li>اتبع خطوات التثبيت ثم استمتع بالتطبيق!</li>
+                </ol>
             </div>
-        
+        </div>
     </section>
 
     <!-- Footer -->
@@ -799,12 +1003,12 @@
             <div class="developer">
                 تم التطوير بواسطة
                 <a href="https://wa.me/201129724884" target="_blank">
-                    <i class="fas fa-user-tie"></i>
+<!--                    <i class="fas fa-user-tie"></i>-->
                      م. سمير مجدى
-               <div class="whatsapp-icon">
-  <i class="fab fa-whatsapp fa-2x"></i>
-</div> </a>
-				
+                    <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </div>
+                </a>
             </div>
             <div class="copyright">
                 &copy; 2025 جميع الحقوق محفوظة | الأسمدة والمخصبات الزراعية
@@ -856,6 +1060,90 @@
                 'wrapAround': true,
                 'disableScrolling': true
             })
+            
+            // عداد تنزيلات التطبيق
+            const counterElement = document.getElementById('downloadCounter');
+            let counterValue = 12487;
+            let animationStarted = false;
+            
+            // بدء عداد التنزيلات عندما يظهر الزر في الشاشة
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !animationStarted) {
+                    animateCounter();
+                    animationStarted = true;
+                }
+            }, { threshold: 0.5 });
+            
+            observer.observe(document.querySelector('.app-download-btn'));
+            
+            function animateCounter() {
+                const target = counterValue + Math.floor(Math.random() * 100) + 50;
+                const duration = 3000;
+                const startTime = performance.now();
+                
+                function updateCounter(currentTime) {
+                    const elapsedTime = currentTime - startTime;
+                    const progress = Math.min(elapsedTime / duration, 1);
+                    
+                    const currentValue = Math.floor(counterValue + (target - counterValue) * progress);
+                    counterElement.textContent = currentValue.toLocaleString('ar-EG');
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counterValue = target;
+                    }
+                }
+                
+                requestAnimationFrame(updateCounter);
+            }
+            
+            // تأثيرات النقر على زر تنزيل التطبيق
+            const downloadBtn = document.querySelector('.app-download-btn');
+            downloadBtn.addEventListener('click', function(e) {
+                // إضافة تأثيرات قبل الانتقال للرابط
+                downloadBtn.style.transform = 'scale(0.95)';
+                downloadBtn.style.background = 'linear-gradient(45deg, #ff0000, #ff8c00)';
+                
+                // إنشاء عناصر التأثير
+                const particles = document.createElement('div');
+                particles.style.position = 'absolute';
+                particles.style.width = '100%';
+                particles.style.height = '100%';
+                particles.style.top = '0';
+                particles.style.left = '0';
+                particles.style.borderRadius = '50px';
+                particles.style.overflow = 'hidden';
+                particles.style.zIndex = '0';
+                downloadBtn.appendChild(particles);
+                
+                // إضافة جزيئات متحركة
+                for (let i = 0; i < 20; i++) {
+                    const particle = document.createElement('span');
+                    particle.style.position = 'absolute';
+                    particle.style.width = '10px';
+                    particle.style.height = '10px';
+                    particle.style.backgroundColor = '#ffffff';
+                    particle.style.borderRadius = '50%';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.opacity = '0.7';
+                    particle.style.transform = 'scale(0)';
+                    particles.appendChild(particle);
+                    
+                    // تحريك الجزيئات
+                    const animation = particle.animate([
+                        { transform: 'scale(0)', opacity: 0.7 },
+                        { transform: 'scale(1)', opacity: 0.7 },
+                        { transform: 'scale(1) translate(' + (Math.random() * 100 - 50) + 'px, ' + (Math.random() * 100 - 50) + 'px)', opacity: 0 }
+                    ], {
+                        duration: 700,
+                        easing: 'ease-out'
+                    });
+                    
+                    animation.onfinish = () => particle.remove();
+                }
+            });
         });
     </script>
 </body>
